@@ -4,6 +4,8 @@
 
 - The basic app that lets you change your mouse cursor to the infamous middle finger cursor that we all know and love!
 
+- **If a window pops up stating "Windows protected your PC" click "More info" and then click "Run Anyway". I promise, this app is not doing anything malicious. You are more than welcome to take a look at the source code :)**
+
 ## Installation
 - Easy!
     - Navigate to the release section over on the right hand side
