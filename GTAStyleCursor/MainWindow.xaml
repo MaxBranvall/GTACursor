@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GTAStyleCursor"
-        Title="MainWindow" Height="675" Width="800"
+        Title="GTA Cursor" Height="675" Width="800"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
 
@@ -12,7 +12,6 @@
 
         <Style TargetType="Button"
                x:Key="AppButton">
-            <!--<Setter Property="MinWidth" Value="250" />-->
             <Setter Property="MinHeight" Value="110"/>
             <Setter Property="HorizontalAlignment" Value="Stretch" />
             <Setter Property="Margin" Value="20"></Setter>
@@ -66,15 +65,6 @@
             </Setter>
             <Setter Property="Panel.ZIndex" Value="2"></Setter>
         </Style>
-        <Style x:Key="FocusVisual">
-            <Setter Property="Control.Template">
-                <Setter.Value>
-                    <ControlTemplate>
-                        <Rectangle Margin="2" StrokeDashArray="1 2" SnapsToDevicePixels="true" StrokeThickness="1" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
 
         <Style TargetType="TextBlock" x:Key="TestBlock">
             <Setter Property="FontSize" Value="20"></Setter>
@@ -90,11 +80,21 @@
             <Setter Property="Margin" Value="0 0 0 10" />
             <Setter Property="FontSize" Value="16" />
             <Setter Property="Padding" Value="10 0 0 0" />
+            <Setter Property="Text" Value="Search Eyefind..." />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border CornerRadius="5" Background="White">
+                            <ScrollViewer Margin="0" x:Name="PART_ContentHost" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
 
     </Window.Resources>
 
-    <Grid ShowGridLines="True">
+    <Grid>
 
         <Grid.Background>
             <SolidColorBrush Color="White" />
@@ -127,23 +127,22 @@
 
             <Image Source="/assets/eyefind.png" Height="80" Margin="50 10 0 5" Grid.Row="0" Grid.Column="0"></Image>
 
-            <TextBox Style="{StaticResource SearchBar}" Grid.Row="1" Grid.ColumnSpan="2">Search Eyefind..</TextBox>
-            <TextBlock></TextBlock>
+            <TextBox Style="{StaticResource SearchBar}" Grid.Row="1" Grid.ColumnSpan="2" />
         </Grid>
 
         <StackPanel Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" MaxWidth="450" Margin="0 20 0 0">
 
             <TextBlock HorizontalAlignment="Center" Margin="0 0 0 10" FontSize="20" FontWeight="Bold">Choose which cursor(s) to modify: </TextBlock>
             
-            <ComboBox x:Name="combo" Width="300" HorizontalContentAlignment="Center" FontSize="20" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0">
+            <ComboBox x:Name="combo" HorizontalContentAlignment="Center" FontSize="20" SelectionChanged="ComboBox_SelectionChanged" SelectedIndex="0">
                 <ComboBoxItem Content="Pick an option..."></ComboBoxItem>
-                <ComboBoxItem Content="Every cursor"></ComboBoxItem>
                 <ComboBoxItem Content="All Common Cursors (Arrow, Hand, IBeam)"></ComboBoxItem>
                 <ComboBoxItem Content="Just Link Select Cursor (Hand)"></ComboBoxItem>
+                <ComboBoxItem Content="Every cursor"></ComboBoxItem>
             </ComboBox>
           
-            <Button Style="{StaticResource AppButton}">Change Cursor</Button>
-            <Button Style="{StaticResource AppButton}">Default Cursor</Button>
+            <Button Style="{StaticResource AppButton}" Click="ChangeCursor_Click">Change Cursor</Button>
+            <Button Style="{StaticResource AppButton}" Click="RevertToDefault_Click">Default Cursors</Button>
 
             <TextBlock HorizontalAlignment="Center" FontSize="20" FontWeight="Bold">Test your cursors below!</TextBlock>
             <WrapPanel Cursor="Hand" HorizontalAlignment="Center">
