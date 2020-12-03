@@ -1,4 +1,9 @@
 # GTA Style Cursor
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/MaxBranvall/GTACursor)
+![Downloads](https://img.shields.io/github/downloads/MaxBranvall/GTACursor/total)
+
+![GitHub watchers](https://img.shields.io/github/watchers/MaxBranvall/GTACursor?label=Watch&style=social)
+[![GitHub stars](https://img.shields.io/github/stars/MaxBranvall/GTACursor?style=social)](https://github.com/MaxBranvall/GTACursor/stargazers)
 
 The basic app that lets you change your mouse cursor to the infamous middle finger cursor that we all know and love!
 ![Screenshot of app](https://raw.githubusercontent.com/MaxBranvall/GTACursor/main/Screenshot%202020-12-02%20094810.png)
