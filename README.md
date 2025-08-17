@@ -12,9 +12,9 @@ The basic app that lets you change your mouse cursor to the infamous middle fing
     - Navigate to the release section over on the right hand side
     - Download and unzip the included zip file wherever your heart desires
     - Double click GTAStyleCursor.exe.
-      - If prompted to download the .NET 5 runtime (~50MB), go ahead and do so.
-      - Incase you were not prompted and can not run the app, [here's a link](https://dotnet.microsoft.com/download/dotnet/current/runtime) to the download page.
-      - You will most likely be just fine downloading the x64 runtime.
+      - If prompted to download the .NET 8 runtime (~50MB), go ahead and do so.
+      - Incase you were not prompted and can not run the app, [here's a link]([https://dotnet.microsoft.com/download/dotnet/current/runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0/runtime)) to the download page.
+      - You will most likely be just fine downloading the x64 desktop app runtime.
     - Enjoy!
     
 ## About This Project
